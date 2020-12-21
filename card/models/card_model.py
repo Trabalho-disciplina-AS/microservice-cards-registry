@@ -1,12 +1,13 @@
-from purchase_items import db
+from card import db
 from datetime import datetime
 
 
 class Cards(db.Document):
     meta = {"collection": "cards"}
-    email = db.StringField(required=False)
-    name = db.StringField(required=False)
-    cpf = db.StringField(required=False)
-    cvv = db.StringField(required=False)
-    month = db.IntField(required=False)
-    year = db.IntField(required=False)
+    user_id = db.StringField(required=True)
+    number = db.StringField(required=True)
+    card_holder = db.StringField(required=True)
+    cpf_holder = db.StringField(required=True)
+    cvv = db.StringField(required=True)
+    month = db.IntField(required=True)
+    year = db.IntField(required=True)
