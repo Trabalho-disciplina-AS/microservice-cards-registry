@@ -47,6 +47,7 @@ class CardController(Resource):
         }
         url = f"http://localhost:4002/validate?number={data_json['number']}&cvv={data_json['cvv']}"
 
+        # import ipdb; ipdb.set_trace()
         response = requests.get(url)
         if response.status_code == 400: 
             return response.json(), 400
