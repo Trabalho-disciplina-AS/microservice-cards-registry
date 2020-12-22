@@ -11,3 +11,6 @@ def insert_card(body: dict):
     card = Cards(**body)
     card.save()
     return str(card.id)
+
+def delete_card_by_id(id):
+    Cards.objects(id=id).delete()

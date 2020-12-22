@@ -6,8 +6,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.config["MONGODB_SETTINGS"] = {
-    "db": "cards",
-    "host": "mongodb://localhost/cards",
+    "db": "devices",
+    "host": "mongodb+srv://denis:arq1104@cluster0.a3msk.mongodb.net/test",
 }
 db = MongoEngine(app)
 api = Api(app)
