@@ -3,9 +3,8 @@ import json
 import requests
 
 
-def get_card_by_user_id(user_id):
-    return Cards.objects(user_id=user_id)
-
+def get_card_by_user_agent(user_agent):
+    return Cards.objects(user_agent=user_agent)
 
 def insert_card(body: dict):
     card = Cards(**body)

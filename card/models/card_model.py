@@ -4,7 +4,7 @@ from datetime import datetime
 
 class Cards(db.Document):
     meta = {"collection": "cards"}
-    user_id = db.StringField(required=True)
+    user_agent = db.StringField(required=True)
     number = db.StringField(required=True)
     card_holder = db.StringField(required=True)
     cpf_holder = db.StringField(required=True)
