@@ -41,7 +41,7 @@ class CardController(Resource):
             "month": request.json["month"],
             "year": request.json["year"],
         }
-        url = f"http://localhost:4002/validate?number={data_json['number']}&cvv={data_json['cvv']}"
+        url = f"http://credit-card:4002/validate?number={data_json['number']}&cvv={data_json['cvv']}"
 
         response = requests.get(url)
         if response.status_code == 400: 
